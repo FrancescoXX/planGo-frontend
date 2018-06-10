@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/elemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="nome"/>
+
+    <TextView
+        android:id="@+id/evDistanza"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/rounded_borders"
+        android:gravity="right"
+        android:text="distanza"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/evStato"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/elemView"
+        android:layout_alignStart="@+id/elemView"
+        android:layout_below="@+id/elemView"
+
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="stato1"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/evTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/evStato"
+        android:layout_alignStart="@+id/evStato"
+        android:layout_below="@+id/evStato"
+        android:text="tipo"
+        android:textSize="12dp"
+        android:visibility="gone"/>
+</RelativeLayout>

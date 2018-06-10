@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetrofitLoginHelloWorld</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_free_user">PLAN &amp; GO</string>
+    <string name="title_activity_free">Map</string>
+    <string name="title_activity_go_maps">Map</string>
+</resources>

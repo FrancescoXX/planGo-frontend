@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.francescoxx.plango.frontend.Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnGetSecretMessage"
+        android:layout_toEndOf="@+id/etDaytripName"
+        android:background="@android:color/darker_gray"
+        android:gravity="fill_vertical|center|fill"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+
+        <Button
+            android:id="@+id/btnPlanActivity"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="PLan"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/btnGoActivity"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bootstrapVerde"
+            android:text="GO"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnPlanActivity"/>
+
+        <Button
+            android:id="@+id/btnGetSecretMessage"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Secret"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnGoActivity"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvLoggedActivity"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/etDaytripDescription"
+        android:layout_toEndOf="@+id/btnGetSecretMessage"
+        android:foregroundGravity="center"
+        android:padding="2dp"/>
+
+    <Button
+        android:id="@+id/btnPostDaytrip"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="New plan"
+        android:textAlignment="textStart"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/btnGetAllSteps"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnPostDaytrip"
+        android:text="Get All Steps for DayTrip"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnGetAllExamples"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get All Examples"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lvSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/relLayout"
+        android:layout_toEndOf="@+id/lvLoggedActivity"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="2dp"/>
+
+    <Button
+        android:id="@+id/btnGetAllDaytrips"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnGetAllSteps"
+        android:text="Show All daytrips"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etDaytripId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="id"
+        android:inputType="textPersonName"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnPostExample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Example"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etDaytripDescription"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="description"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_below="@+id/etDaytripName"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/etDaytripName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_below="@+id/relLayout"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

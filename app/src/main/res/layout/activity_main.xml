@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.francescoxx.plango.frontend.LoginActivity"
+    android:background="@mipmap/plane">
+
+    <LinearLayout
+        android:layout_width="313dp"
+        android:layout_height="364dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="131dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="306dp"
+            android:layout_height="123dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.28"
+            android:backgroundTint="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:textColor="?android:attr/textColorTertiary"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView2"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:hint="username"
+                android:paddingLeft="5dp"
+                android:textColor="?android:attr/textColorTertiary"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="24sp"
+                android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/edtPassword"
+                android:layout_alignParentStart="true"
+                android:text="Password: "
+                android:textColor="?android:attr/textColorTertiary"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textColor="?android:attr/textColorTertiary"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="24sp"
+                android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnGetAllPois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GET POIS"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="126dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="?android:attr/textColorTertiary"
+                android:shadowColor="@color/common_google_signin_btn_text_light_default"
+                android:shadowDx="20"
+                android:shadowDy="20"
+                android:shadowRadius="20"
+                android:text="REGISTER"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnRegister"
+                android:alpha="1"
+                android:backgroundTint="?android:attr/textColorSecondary"
+                android:shadowColor="@color/common_google_signin_btn_text_light_default"
+                android:shadowDx="20"
+                android:shadowDy="20"
+                android:shadowRadius="20"
+                android:text="Login"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnGetUsernameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get id by name"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnGoMapsActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Maps Activity"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/lvPois"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,182 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.francescoxx.plango.frontend.Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/leftPlanRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/rightRelativeLayout"
+        android:background="@android:color/darker_gray">
+
+        <ListView
+            android:id="@+id/lvTempPois"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/bootstrapVerde"
+            android:padding="2dp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right"
+        android:layout_toStartOf="@+id/rightRelativeLayout"
+        android:text="info"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnGetAllPoisMaps"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btnListActivity"
+        android:text="Get All Pois"
+        android:visibility="gone"/>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:context="com.francescoxx.plango.frontend.MapsActivity"
+        android:layout_above="@+id/rightRelativeLayout"/>
+
+    <RelativeLayout
+        android:id="@+id/rightRelativeLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/leftPlanRelative"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:id="@+id/newStepRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
+            android:background="?attr/colorButtonNormal">
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnNewTempStep"
+                android:backgroundTint="@color/bootStrapBlu"
+                android:text="OK"
+                android:textColor="?attr/colorButtonNormal"
+                android:textSize="22sp"/>
+
+            <ImageButton
+                android:id="@+id/btnNewTempStep"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnCancelStep"
+                android:backgroundTint="@color/bootstrapVerde"
+                app:srcCompat="@android:drawable/ic_menu_add"/>
+
+            <ImageButton
+                android:id="@+id/btnCancelStep"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/bootStrapRed"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/newStepRelativeLayout"
+            android:background="@android:color/darker_gray"
+            >
+
+            <TextView
+                android:id="@+id/tvStepDescription"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvStepName"
+                android:background="?attr/colorButtonNormal"
+                android:padding="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tvStepName"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="1dp"
+                android:background="?attr/colorButtonNormal"
+                android:paddingLeft="2dp"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/etStepDesc"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:ems="10"
+                android:hint="desc"
+                android:inputType="textPersonName"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnListActivity"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@android:color/darker_gray"
+        android:visibility="gone"
+        app:srcCompat="?android:attr/actionModeFindDrawable"/>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@android:color/darker_gray"
+        app:srcCompat="?android:attr/homeAsUpIndicator"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1ebf26</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="asa">#4caf50</color>
+    <color name="dasd">#337ab7</color>
+    <color name="bootstrapVerde">#4caf50</color>
+    <color name="bootStrapBlu">#337ab7</color>
+    <color name="bootStrapRed">#c9302c</color>
+    <color name="bootStrapGrigio">#292b2c</color>
+</resources>
